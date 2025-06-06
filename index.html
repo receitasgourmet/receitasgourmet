@@ -11,8 +11,226 @@
       --cor3: #8b4d2f;
       --cor4: #fff0e1;
       --cor-btn: #d97c4d;
+/* MENU COMPACTO FIXO */
+.menu-compacto {
+  position: fixed;
+  top: 0; left: 0; width: 100vw;
+  background: #f8e1cc;
+  z-index: 1100;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 16px;
+}
+.menu-compacto .menu-links {
+  display: flex;
+  gap: 17px;
+  flex: 1;
+  justify-content: center;
+}
+.menu-compacto .menu-links a {
+  color: #8b4d2f;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.03em;
+  padding: 3px 2px;
+  transition: color 0.19s;
+}
+.menu-compacto .menu-links a:hover {
+  color: #d97c4d;
+}
+.menu-compacto .btn-voltar {
+  background: none;
+  border: none;
+  color: #d97c4d;
+  font-size: 1.27em;
+  cursor: pointer;
+  margin-right: 11px;
+  margin-left: 2px;
+  transition: color 0.16s;
+}
+.menu-compacto .btn-voltar:hover { color: #b35d2f; }
+.espaco-menu-compacto { height: 45px; width: 100%; display: block; }
+
+/* BARRA DE PESQUISA */
+.pesquisa-bar {
+  width: 100%;
+  background: #fff0e1;
+  padding: 12px 0 7px 0;
+  text-align: center;
+  position: relative;
+  z-index: 999;
+}
+.pesquisa-bar form {
+  display: inline-flex;
+  align-items: center;
+  max-width: 420px;
+  background: #fff;
+  border-radius: 25px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  padding: 2px 11px 2px 7px;
+  border: 1px solid #f2e2d4;
+}
+.pesquisa-bar input[type="text"] {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 1.08em;
+  padding: 10px 10px 10px 12px;
+  border-radius: 25px 0 0 25px;
+  background: transparent;
+}
+.pesquisa-bar button {
+  background: #d97c4d;
+  color: #fff;
+  border: none;
+  border-radius: 0 25px 25px 0;
+  font-size: 1.1em;
+  padding: 8px 19px;
+  cursor: pointer;
+  transition: background 0.17s;
+}
+.pesquisa-bar button:hover { background: #b35d2f; }
+
+/* ÍCONE FLUTUANTE DO CARRINHO */
+.carrinho-flutuante {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: #43b97f;
+  color: #fff;
+  border-radius: 50%;
+  width: 58px; height: 58px;
+  display: flex;
+  align-items: center; justify-content: center;
+  box-shadow: 0 4px 16px rgba(67,185,127,0.15);
+  cursor: pointer;
+  z-index: 1600;
+  font-size: 2.1em;
+  transition: background 0.17s;
+}
+.carrinho-flutuante:hover { background: #32875c; }
+.carrinho-flutuante .badge {
+  position: absolute;
+  top: 7px; right: 9px;
+  background: #c0392b;
+  color: #fff;
+  font-size: 0.95em;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 2px 7px;
+  min-width: 24px;
+  text-align: center;
+  pointer-events: none;
+}
+/* MODAL DO CARRINHO */
+.modal-carrinho-bg {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0; top: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.19);
+  justify-content: center;
+  align-items: flex-end;
+}
+.modal-carrinho {
+  background: #fffbe8;
+  border-radius: 16px 16px 0 0;
+  box-shadow: 0 0 18px rgba(0,0,0,0.13);
+  width: 97vw; max-width: 385px; min-height: 210px;
+  padding: 28px 18px 30px 18px;
+  position: relative;
+  margin-bottom: 0;
+  animation: slideUp 0.24s cubic-bezier(.38,.48,.44,1.18);
+}
+@keyframes slideUp {
+  from { transform: translateY(100%);}
+  to { transform: translateY(0);}
+}
+.modal-carrinho .fechar-btn {
+  position: absolute;
+  top: 14px; right: 14px;
+  background: #c0392b;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.1em;
+  width: 31px; height: 31px;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.17s;
+}
+.modal-carrinho .fechar-btn:hover { background: #b35d2f; }
+.modal-carrinho h2 { margin-top: 0; font-size: 1.13em; color: #8b4d2f; text-align: center; margin-bottom: 13px; letter-spacing: 1px;}
+.modal-carrinho ul {
+  margin: 0 0 11px 0;
+  padding-left: 18px;
+  max-height: 180px;
+  overflow-y: auto;
+}
+.modal-carrinho .total {
+  font-weight: bold;
+  color: #8b4d2f;
+  font-size: 1.15em;
+  margin: 10px 0 15px 0;
+  text-align: center;
+}
+.modal-carrinho .finalizar-btn {
+  background: #43b97f;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.12em;
+  padding: 10px 17px;
+  width: 100%;
+  cursor: pointer;
+  margin-bottom: 6px;
+  margin-top: 12px;
+  transition: background 0.13s;
+}
+.modal-carrinho .finalizar-btn:hover { background: #32875c; }
     }
-    body {
+    body {<!-- MENU COMPACTO FIXO NO TOPO -->
+<nav class="menu-compacto" id="menuCompacto">
+  <button class="btn-voltar" title="Voltar ao topo" onclick="scrollToTop()">⬆</button>
+  <div class="menu-links">
+    <a href="#bolos">Bolos</a>
+    <a href="#doces">Doces</a>
+    <a href="#fitness">Fitness</a>
+    <a href="#salgados">Salgados</a>
+    <a href="#geladas">Geladas</a>
+    <a href="#outros">Outros</a>
+    <a href="#carrinho">Carrinho</a>
+  </div>
+</nav>
+<div class="espaco-menu-compacto"></div>
+
+<!-- BARRA DE PESQUISA -->
+<div class="pesquisa-bar">
+  <form id="formPesquisa" autocomplete="off" onsubmit="event.preventDefault(); pesquisarApostilas();">
+    <input type="text" id="campoPesquisa" placeholder="Pesquisar apostila, sabor, tipo..." aria-label="Pesquisar apostilas">
+    <button type="submit" title="Pesquisar">🔍</button>
+  </form>
+</div>
+
+<!-- ÍCONE FLUTUANTE CARRINHO -->
+<div class="carrinho-flutuante" id="carrinhoFlutuante" onclick="abrirModalCarrinho()" title="Ver itens do carrinho">
+  🛒
+  <span class="badge" id="carrinhoBadge">0</span>
+</div>
+
+<!-- MODAL DO CARRINHO -->
+<div class="modal-carrinho-bg" id="modalCarrinhoBg" onclick="fecharModalCarrinho(event)">
+  <div class="modal-carrinho" onclick="event.stopPropagation()">
+    <button class="fechar-btn" onclick="fecharModalCarrinho()" title="Fechar">✕</button>
+    <h2>Itens no Carrinho</h2>
+    <ul id="lista-carrinho-modal"></ul>
+    <div class="total" id="total-carrinho-modal"></div>
+    <button class="finalizar-btn" onclick="finalizarCompra()">Finalizar compra no WhatsApp</button>
+  </div>
+</div>
       font-family: 'Segoe UI', Arial, sans-serif;
       background-color: var(--cor1);
       color: #333;
@@ -411,6 +629,81 @@
       window.open('https://wa.me/5542988328445?text=' + msg, '_blank');
     }
     atualizarCarrinho();
+    // MENU COMPACTO VOLTAR AO TOPO
+function scrollToTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
+
+// PESQUISA
+function pesquisarApostilas() {
+  const termo = document.getElementById('campoPesquisa').value.toLowerCase().trim();
+  const secoes = document.querySelectorAll('main .secao');
+  secoes.forEach(secao => {
+    let itens = secao.querySelectorAll('.item');
+    let achouNaSecao = false;
+    itens.forEach(item => {
+      const titulo = item.querySelector('h3').textContent.toLowerCase();
+      if (termo === '' || titulo.includes(termo)) {
+        item.style.display = '';
+        achouNaSecao = true;
+      } else {
+        item.style.display = 'none';
+      }
+    });
+    secao.style.display = achouNaSecao || termo === '' ? '' : 'none';
+  });
+}
+
+// ÍCONE FLUTUANTE DO CARRINHO + MODAL
+function atualizarCarrinhoFlutuante() {
+  const badge = document.getElementById('carrinhoBadge');
+  badge.textContent = carrinho.length;
+  const listaModal = document.getElementById('lista-carrinho-modal');
+  listaModal.innerHTML = '';
+  if (carrinho.length === 0) {
+    listaModal.innerHTML = '<li>Seu carrinho está vazio.</li>';
+    document.getElementById('total-carrinho-modal').textContent = '';
+    return;
+  }
+  carrinho.forEach((item, index) => {
+    const li = document.createElement('li');
+    li.textContent = `${item} - R$ 10,00`;
+    li.style.marginBottom = '7px';
+    const btnRemover = document.createElement('button');
+    btnRemover.textContent = 'Remover';
+    btnRemover.style.marginLeft = '15px';
+    btnRemover.style.background = '#c0392b';
+    btnRemover.style.color = '#fff';
+    btnRemover.style.border = 'none';
+    btnRemover.style.borderRadius = '4px';
+    btnRemover.style.cursor = 'pointer';
+    btnRemover.onclick = () => {
+      carrinho.splice(index, 1);
+      atualizarCarrinho();
+      atualizarCarrinhoFlutuante();
+      localStorage.setItem('carrinhoGourmet', JSON.stringify(carrinho));
+    };
+    li.appendChild(btnRemover);
+    listaModal.appendChild(li);
+  });
+  let total = carrinho.length * 10;
+  document.getElementById('total-carrinho-modal').textContent = `Total: R$ ${total.toFixed(2).replace('.', ',')}`;
+}
+function abrirModalCarrinho() {
+  atualizarCarrinhoFlutuante();
+  document.getElementById('modalCarrinhoBg').style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
+function fecharModalCarrinho(ev) {
+  if (!ev || ev.target === document.getElementById('modalCarrinhoBg')) {
+    document.getElementById('modalCarrinhoBg').style.display = 'none';
+    document.body.style.overflow = '';
+  }
+}
+document.addEventListener('keydown', function(e){
+  if(e.key === "Escape") fecharModalCarrinho();
+});
+
+// Inicialização
+atualizarCarrinhoFlutuante();
   </script>
 </body>
 </html>
