@@ -11,226 +11,185 @@
       --cor3: #8b4d2f;
       --cor4: #fff0e1;
       --cor-btn: #d97c4d;
-/* MENU COMPACTO FIXO */
-.menu-compacto {
-  position: fixed;
-  top: 0; left: 0; width: 100vw;
-  background: #f8e1cc;
-  z-index: 1100;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.07);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 5px 16px;
-}
-.menu-compacto .menu-links {
-  display: flex;
-  gap: 17px;
-  flex: 1;
-  justify-content: center;
-}
-.menu-compacto .menu-links a {
-  color: #8b4d2f;
-  font-weight: 600;
-  text-decoration: none;
-  font-size: 1.03em;
-  padding: 3px 2px;
-  transition: color 0.19s;
-}
-.menu-compacto .menu-links a:hover {
-  color: #d97c4d;
-}
-.menu-compacto .btn-voltar {
-  background: none;
-  border: none;
-  color: #d97c4d;
-  font-size: 1.27em;
-  cursor: pointer;
-  margin-right: 11px;
-  margin-left: 2px;
-  transition: color 0.16s;
-}
-.menu-compacto .btn-voltar:hover { color: #b35d2f; }
-.espaco-menu-compacto { height: 45px; width: 100%; display: block; }
-
-/* BARRA DE PESQUISA */
-.pesquisa-bar {
-  width: 100%;
-  background: #fff0e1;
-  padding: 12px 0 7px 0;
-  text-align: center;
-  position: relative;
-  z-index: 999;
-}
-.pesquisa-bar form {
-  display: inline-flex;
-  align-items: center;
-  max-width: 420px;
-  background: #fff;
-  border-radius: 25px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
-  padding: 2px 11px 2px 7px;
-  border: 1px solid #f2e2d4;
-}
-.pesquisa-bar input[type="text"] {
-  flex: 1;
-  border: none;
-  outline: none;
-  font-size: 1.08em;
-  padding: 10px 10px 10px 12px;
-  border-radius: 25px 0 0 25px;
-  background: transparent;
-}
-.pesquisa-bar button {
-  background: #d97c4d;
-  color: #fff;
-  border: none;
-  border-radius: 0 25px 25px 0;
-  font-size: 1.1em;
-  padding: 8px 19px;
-  cursor: pointer;
-  transition: background 0.17s;
-}
-.pesquisa-bar button:hover { background: #b35d2f; }
-
-/* ÍCONE FLUTUANTE DO CARRINHO */
-.carrinho-flutuante {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  background: #43b97f;
-  color: #fff;
-  border-radius: 50%;
-  width: 58px; height: 58px;
-  display: flex;
-  align-items: center; justify-content: center;
-  box-shadow: 0 4px 16px rgba(67,185,127,0.15);
-  cursor: pointer;
-  z-index: 1600;
-  font-size: 2.1em;
-  transition: background 0.17s;
-}
-.carrinho-flutuante:hover { background: #32875c; }
-.carrinho-flutuante .badge {
-  position: absolute;
-  top: 7px; right: 9px;
-  background: #c0392b;
-  color: #fff;
-  font-size: 0.95em;
-  font-weight: bold;
-  border-radius: 50%;
-  padding: 2px 7px;
-  min-width: 24px;
-  text-align: center;
-  pointer-events: none;
-}
-/* MODAL DO CARRINHO */
-.modal-carrinho-bg {
-  display: none;
-  position: fixed;
-  z-index: 2000;
-  left: 0; top: 0;
-  width: 100vw; height: 100vh;
-  background: rgba(0,0,0,0.19);
-  justify-content: center;
-  align-items: flex-end;
-}
-.modal-carrinho {
-  background: #fffbe8;
-  border-radius: 16px 16px 0 0;
-  box-shadow: 0 0 18px rgba(0,0,0,0.13);
-  width: 97vw; max-width: 385px; min-height: 210px;
-  padding: 28px 18px 30px 18px;
-  position: relative;
-  margin-bottom: 0;
-  animation: slideUp 0.24s cubic-bezier(.38,.48,.44,1.18);
-}
-@keyframes slideUp {
-  from { transform: translateY(100%);}
-  to { transform: translateY(0);}
-}
-.modal-carrinho .fechar-btn {
-  position: absolute;
-  top: 14px; right: 14px;
-  background: #c0392b;
-  color: #fff;
-  border: none;
-  border-radius: 50%;
-  font-size: 1.1em;
-  width: 31px; height: 31px;
-  cursor: pointer;
-  display: flex; align-items: center; justify-content: center;
-  transition: background 0.17s;
-}
-.modal-carrinho .fechar-btn:hover { background: #b35d2f; }
-.modal-carrinho h2 { margin-top: 0; font-size: 1.13em; color: #8b4d2f; text-align: center; margin-bottom: 13px; letter-spacing: 1px;}
-.modal-carrinho ul {
-  margin: 0 0 11px 0;
-  padding-left: 18px;
-  max-height: 180px;
-  overflow-y: auto;
-}
-.modal-carrinho .total {
-  font-weight: bold;
-  color: #8b4d2f;
-  font-size: 1.15em;
-  margin: 10px 0 15px 0;
-  text-align: center;
-}
-.modal-carrinho .finalizar-btn {
-  background: #43b97f;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  font-size: 1.12em;
-  padding: 10px 17px;
-  width: 100%;
-  cursor: pointer;
-  margin-bottom: 6px;
-  margin-top: 12px;
-  transition: background 0.13s;
-}
-.modal-carrinho .finalizar-btn:hover { background: #32875c; }
     }
-    body {<!-- MENU COMPACTO FIXO NO TOPO -->
-<nav class="menu-compacto" id="menuCompacto">
-  <button class="btn-voltar" title="Voltar ao topo" onclick="scrollToTop()">⬆</button>
-  <div class="menu-links">
-    <a href="#bolos">Bolos</a>
-    <a href="#doces">Doces</a>
-    <a href="#fitness">Fitness</a>
-    <a href="#salgados">Salgados</a>
-    <a href="#geladas">Geladas</a>
-    <a href="#outros">Outros</a>
-    <a href="#carrinho">Carrinho</a>
-  </div>
-</nav>
-<div class="espaco-menu-compacto"></div>
+    .menu-compacto {
+      position: fixed;
+      top: 0; left: 0; width: 100vw;
+      background: #f8e1cc;
+      z-index: 1100;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 5px 16px;
+    }
+    .menu-compacto .menu-links {
+      display: flex;
+      gap: 17px;
+      flex: 1;
+      justify-content: center;
+    }
+    .menu-compacto .menu-links a {
+      color: #8b4d2f;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 1.03em;
+      padding: 3px 2px;
+      transition: color 0.19s;
+    }
+    .menu-compacto .menu-links a:hover {
+      color: #d97c4d;
+    }
+    .menu-compacto .btn-voltar {
+      background: none;
+      border: none;
+      color: #d97c4d;
+      font-size: 1.27em;
+      cursor: pointer;
+      margin-right: 11px;
+      margin-left: 2px;
+      transition: color 0.16s;
+    }
+    .menu-compacto .btn-voltar:hover { color: #b35d2f; }
+    .espaco-menu-compacto { height: 45px; width: 100%; display: block; }
 
-<!-- BARRA DE PESQUISA -->
-<div class="pesquisa-bar">
-  <form id="formPesquisa" autocomplete="off" onsubmit="event.preventDefault(); pesquisarApostilas();">
-    <input type="text" id="campoPesquisa" placeholder="Pesquisar apostila, sabor, tipo..." aria-label="Pesquisar apostilas">
-    <button type="submit" title="Pesquisar">🔍</button>
-  </form>
-</div>
+    .pesquisa-bar {
+      width: 100%;
+      background: #fff0e1;
+      padding: 12px 0 7px 0;
+      text-align: center;
+      position: relative;
+      z-index: 999;
+    }
+    .pesquisa-bar form {
+      display: inline-flex;
+      align-items: center;
+      max-width: 420px;
+      background: #fff;
+      border-radius: 25px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+      padding: 2px 11px 2px 7px;
+      border: 1px solid #f2e2d4;
+    }
+    .pesquisa-bar input[type="text"] {
+      flex: 1;
+      border: none;
+      outline: none;
+      font-size: 1.08em;
+      padding: 10px 10px 10px 12px;
+      border-radius: 25px 0 0 25px;
+      background: transparent;
+    }
+    .pesquisa-bar button {
+      background: #d97c4d;
+      color: #fff;
+      border: none;
+      border-radius: 0 25px 25px 0;
+      font-size: 1.1em;
+      padding: 8px 19px;
+      cursor: pointer;
+      transition: background 0.17s;
+    }
+    .pesquisa-bar button:hover { background: #b35d2f; }
 
-<!-- ÍCONE FLUTUANTE CARRINHO -->
-<div class="carrinho-flutuante" id="carrinhoFlutuante" onclick="abrirModalCarrinho()" title="Ver itens do carrinho">
-  🛒
-  <span class="badge" id="carrinhoBadge">0</span>
-</div>
+    .carrinho-flutuante {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #43b97f;
+      color: #fff;
+      border-radius: 50%;
+      width: 58px; height: 58px;
+      display: flex;
+      align-items: center; justify-content: center;
+      box-shadow: 0 4px 16px rgba(67,185,127,0.15);
+      cursor: pointer;
+      z-index: 1600;
+      font-size: 2.1em;
+      transition: background 0.17s;
+    }
+    .carrinho-flutuante:hover { background: #32875c; }
+    .carrinho-flutuante .badge {
+      position: absolute;
+      top: 7px; right: 9px;
+      background: #c0392b;
+      color: #fff;
+      font-size: 0.95em;
+      font-weight: bold;
+      border-radius: 50%;
+      padding: 2px 7px;
+      min-width: 24px;
+      text-align: center;
+      pointer-events: none;
+    }
+    .modal-carrinho-bg {
+      display: none;
+      position: fixed;
+      z-index: 2000;
+      left: 0; top: 0;
+      width: 100vw; height: 100vh;
+      background: rgba(0,0,0,0.19);
+      justify-content: center;
+      align-items: flex-end;
+    }
+    .modal-carrinho {
+      background: #fffbe8;
+      border-radius: 16px 16px 0 0;
+      box-shadow: 0 0 18px rgba(0,0,0,0.13);
+      width: 97vw; max-width: 385px; min-height: 210px;
+      padding: 28px 18px 30px 18px;
+      position: relative;
+      margin-bottom: 0;
+      animation: slideUp 0.24s cubic-bezier(.38,.48,.44,1.18);
+    }
+    @keyframes slideUp {
+      from { transform: translateY(100%);}
+      to { transform: translateY(0);}
+    }
+    .modal-carrinho .fechar-btn {
+      position: absolute;
+      top: 14px; right: 14px;
+      background: #c0392b;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      font-size: 1.1em;
+      width: 31px; height: 31px;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: background 0.17s;
+    }
+    .modal-carrinho .fechar-btn:hover { background: #b35d2f; }
+    .modal-carrinho h2 { margin-top: 0; font-size: 1.13em; color: #8b4d2f; text-align: center; margin-bottom: 13px; letter-spacing: 1px;}
+    .modal-carrinho ul {
+      margin: 0 0 11px 0;
+      padding-left: 18px;
+      max-height: 180px;
+      overflow-y: auto;
+    }
+    .modal-carrinho .total {
+      font-weight: bold;
+      color: #8b4d2f;
+      font-size: 1.15em;
+      margin: 10px 0 15px 0;
+      text-align: center;
+    }
+    .modal-carrinho .finalizar-btn {
+      background: #43b97f;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 1.12em;
+      padding: 10px 17px;
+      width: 100%;
+      cursor: pointer;
+      margin-bottom: 6px;
+      margin-top: 12px;
+      transition: background 0.13s;
+    }
+    .modal-carrinho .finalizar-btn:hover { background: #32875c; }
 
-<!-- MODAL DO CARRINHO -->
-<div class="modal-carrinho-bg" id="modalCarrinhoBg" onclick="fecharModalCarrinho(event)">
-  <div class="modal-carrinho" onclick="event.stopPropagation()">
-    <button class="fechar-btn" onclick="fecharModalCarrinho()" title="Fechar">✕</button>
-    <h2>Itens no Carrinho</h2>
-    <ul id="lista-carrinho-modal"></ul>
-    <div class="total" id="total-carrinho-modal"></div>
-    <button class="finalizar-btn" onclick="finalizarCompra()">Finalizar compra no WhatsApp</button>
-  </div>
-</div>
+    body {
       font-family: 'Segoe UI', Arial, sans-serif;
       background-color: var(--cor1);
       color: #333;
@@ -416,6 +375,43 @@
   </style>
 </head>
 <body>
+  <!-- MENU COMPACTO FIXO NO TOPO -->
+  <nav class="menu-compacto" id="menuCompacto">
+    <button class="btn-voltar" title="Voltar ao topo" onclick="scrollToTop()">⬆</button>
+    <div class="menu-links">
+      <a href="#bolos">Bolos e Tortas</a>
+      <a href="#doces">Doces Gourmet</a>
+      <a href="#fitness">Fitness</a>
+      <a href="#salgados">Salgados e Massas</a>
+      <a href="#geladas">Sobremesas Geladas</a>
+      <a href="#outros">Outros</a>
+      <a href="#carrinho">Carrinho</a>
+    </div>
+  </nav>
+  <div class="espaco-menu-compacto"></div>
+  <!-- BARRA DE PESQUISA -->
+  <div class="pesquisa-bar">
+    <form id="formPesquisa" autocomplete="off" onsubmit="event.preventDefault(); pesquisarApostilas();">
+      <input type="text" id="campoPesquisa" placeholder="Pesquisar apostila, sabor, tipo..." aria-label="Pesquisar apostilas">
+      <button type="submit" title="Pesquisar">🔍</button>
+    </form>
+  </div>
+  <!-- ÍCONE FLUTUANTE CARRINHO -->
+  <div class="carrinho-flutuante" id="carrinhoFlutuante" onclick="abrirModalCarrinho()" title="Ver itens do carrinho">
+    🛒
+    <span class="badge" id="carrinhoBadge">0</span>
+  </div>
+  <!-- MODAL DO CARRINHO -->
+  <div class="modal-carrinho-bg" id="modalCarrinhoBg" onclick="fecharModalCarrinho(event)">
+    <div class="modal-carrinho" onclick="event.stopPropagation()">
+      <button class="fechar-btn" onclick="fecharModalCarrinho()" title="Fechar">✕</button>
+      <h2>Itens no Carrinho</h2>
+      <ul id="lista-carrinho-modal"></ul>
+      <div class="total" id="total-carrinho-modal"></div>
+      <button class="finalizar-btn" onclick="finalizarCompra()">Finalizar compra no WhatsApp</button>
+    </div>
+  </div>
+
   <header class="topo">
     <img src="img/logo.png" alt="Logo da Marca" class="logo">
     <h1>Catálogo de Apostilas Gourmet</h1>
@@ -440,126 +436,117 @@
     <section id="bolos" class="secao">
       <h2>Bolos e Tortas</h2>
       <div class="catalogo-lista">
-        <div class="item"><img src="img/bolo_caseiro.jpg" alt="Receitas de Bolo Caseiro"><div class="info"><h3>Apostila - Receitas de Bolo Caseiro</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Bolo Caseiro')">Adicionar ao carrinho</button></div></div>
-        <div class="item"><img src="img/bolo_gelado.jpg" alt="Receitas de Bolo Gelado"><div class="info"><h3>Apostila - Receitas de Bolo Gelado</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Bolo Gelado')">Adicionar ao carrinho</button></div></div>
-        <div class="item"><img src="img/bolo_piscina.jpg" alt="Receitas de Bolo Piscina"><div class="info"><h3>Apostila - Receitas de Bolo Piscina</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Bolo Piscina')">Adicionar ao carrinho</button></div></div>
-        <div class="item"><img src="img/bolo_rolo.jpg" alt="Receitas de Bolo de Rolo"><div class="info"><h3>Apostila - Receitas de Bolo de Rolo</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Bolo de Rolo')">Adicionar ao carrinho</button></div></div>
-        <div class="item"><img src="img/bolo_vulcao.jpg" alt="Receitas de Bolo Vulcão"><div class="info"><h3>Apostila - Receitas de Bolo Vulcão</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Bolo Vulcão')">Adicionar ao carrinho</button></div></div>
-        <div class="item"><img src="img/bolo_vulcao_2.jpg" alt="Receitas de Bolo Vulcão [02]"><div class="info"><h3>Apostila - Receitas de Bolo Vulcão [02]</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Bolo Vulcão [02]')">Adicionar ao carrinho</button></div></div>
-        <div class="item"><img src="img/bolo_fatias.jpg" alt="Receitas de Fatias de Bolo"><div class="info"><h3>Apostila - Receitas de Fatias de Bolo</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Fatias de Bolo')">Adicionar ao carrinho</button></div></div>
         <div class="item"><img src="img/bolo_aniversario.jpg" alt="Receitas de Aniversário"><div class="info"><h3>Apostila - Receitas de Aniversário</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Aniversário')">Adicionar ao carrinho</button></div></div>
         <div class="item"><img src="img/bolo_bento.jpg" alt="Receitas de Bentô Cake"><div class="info"><h3>Apostila - Receitas de Bentô Cake</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Bentô Cake')">Adicionar ao carrinho</button></div></div>
-        <div class="item"><img src="img/bolo_cucas.jpg" alt="Receitas de Cucas"><div class="info"><h3>Apostila - Receitas de Cucas</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Cucas')">Adicionar ao carrinho</button></div></div>
-        <div class="item"><img src="img/bolo_torta_travessa.jpg" alt="Receitas de Torta na Travessa"><div class="info"><h3>Apostila - Receitas de Torta na Travessa</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Torta na Travessa')">Adicionar ao carrinho</button></div></div>
-        <div class="item"><img src="img/bolo_torta_liquidificador.jpg" alt="Receitas de Torta Salgada de Liquidificador"><div class="info"><h3>Apostila - Receitas de Torta Salgada de Liquidificador</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Torta Salgada de Liquidificador')">Adicionar ao carrinho</button></div></div>
-        <div class="item"><img src="img/bolo_torta_doces.jpg" alt="Receitas de Tortas Doces"><div class="info"><h3>Apostila - Receitas de Tortas Doces</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Tortas Doces')">Adicionar ao carrinho</button></div></div>
-        <div class="item"><img src="img/bolo_torta_salgadas.jpg" alt="Receitas de Tortas Salgadas"><div class="info"><h3>Apostila - Receitas de Tortas Salgadas</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Tortas Salgadas')">Adicionar ao carrinho</button></div></div>
-        <div class="item"><img src="img/bolo_torta_vitrine.jpg" alt="Receitas de Torta de Vitrine"><div class="info"><h3>Apostila - Receitas de Torta de Vitrine</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Torta de Vitrine')">Adicionar ao carrinho</button></div></div>
-        <div class="item"><img src="img/bolo_slice_cakes.jpg" alt="Receitas de Slice Cakes"><div class="info"><h3>Apostila - Receitas de Slice Cakes</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Slice Cakes')">Adicionar ao carrinho</button></div></div>
-        <div class="item"><img src="img/bolo_bolos.jpg" alt="Receitas de Bolos"><div class="info"><h3>Apostila - Receitas de Bolos</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Bolos')">Adicionar ao carrinho</button></div></div>
-        <div class="item"><img src="img/bolo_bolos_liquidificador.jpg" alt="Receitas de Bolos de Liquidificador"><div class="info"><h3>Apostila - Receitas de Bolos de Liquidificador</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Bolos de Liquidificador')">Adicionar ao carrinho</button></div></div>
-        <div class="item"><img src="img/bolo_bolos_sem_fermento.jpg" alt="Receitas de Bolos sem Fermento"><div class="info"><h3>Apostila - Receitas de Bolos sem Fermento</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Bolos sem Fermento')">Adicionar ao carrinho</button></div></div>
-        <div class="item"><img src="img/bolo_bolos_zero.jpg" alt="Receitas de Bolos Zero"><div class="info"><h3>Apostila - Receitas de Bolos Zero</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Bolos Zero')">Adicionar ao carrinho</button></div></div>
         <div class="item"><img src="img/bolo_caseiro.jpg" alt="Receitas de Bolo Caseiro"><div class="info"><h3>Apostila - Receitas de Bolo Caseiro</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Bolo Caseiro')">Adicionar ao carrinho</button></div></div>
-        <!-- Adicione outros bolos e tortas aqui seguindo a ordem alfabética -->
+        <div class="item"><img src="img/bolo_caseiro.jpg" alt="Receitas de Bolo Caseiro"><div class="info"><h3>Apostila - Receitas de Bolo Caseiro</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Bolo Caseiro')">Adicionar ao carrinho</button></div></div>
+        <div class="item"><img src="img/bolo_de_festa.jpg" alt="Receitas de Bolo de Festa"><div class="info"><h3>Apostila - Receitas de Bolo de Festa</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Bolo de Festa')">Adicionar ao carrinho</button></div></div>
+        <div class="item"><img src="img/bolo_de_rolo.jpg" alt="Receitas de Bolo de Rolo"><div class="info"><h3>Apostila - Receitas de Bolo de Rolo</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Bolo de Rolo')">Adicionar ao carrinho</button></div></div>
+        <div class="item"><img src="img/bolo_fatias.jpg" alt="Receitas de Fatias de Bolo"><div class="info"><h3>Apostila - Receitas de Fatias de Bolo</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Fatias de Bolo')">Adicionar ao carrinho</button></div></div>
+        <div class="item"><img src="img/bolo_gelado.jpg" alt="Receitas de Bolo Gelado"><div class="info"><h3>Apostila - Receitas de Bolo Gelado</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Bolo Gelado')">Adicionar ao carrinho</button></div></div>
+        <div class="item"><img src="img/bolo_piscina.jpg" alt="Receitas de Bolo Piscina"><div class="info"><h3>Apostila - Receitas de Bolo Piscina</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Bolo Piscina')">Adicionar ao carrinho</button></div></div>
+        <div class="item"><img src="img/bolo_slice_cakes.jpg" alt="Receitas de Slice Cakes"><div class="info"><h3>Apostila - Receitas de Slice Cakes</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Slice Cakes')">Adicionar ao carrinho</button></div></div>
+        <div class="item"><img src="img/bolo_torta_doces.jpg" alt="Receitas de Tortas Doces"><div class="info"><h3>Apostila - Receitas de Tortas Doces</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Tortas Doces')">Adicionar ao carrinho</button></div></div>
+        <div class="item"><img src="img/bolo_torta_liquidificador.jpg" alt="Receitas de Torta Salgada de Liquidificador"><div class="info"><h3>Apostila - Receitas de Torta Salgada de Liquidificador</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Torta Salgada de Liquidificador')">Adicionar ao carrinho</button></div></div>
+        <div class="item"><img src="img/bolo_torta_salgadas.jpg" alt="Receitas de Tortas Salgadas"><div class="info"><h3>Apostila - Receitas de Tortas Salgadas</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Tortas Salgadas')">Adicionar ao carrinho</button></div></div>
+        <div class="item"><img src="img/bolo_torta_travessa.jpg" alt="Receitas de Torta na Travessa"><div class="info"><h3>Apostila - Receitas de Torta na Travessa</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Torta na Travessa')">Adicionar ao carrinho</button></div></div>
+        <div class="item"><img src="img/bolo_torta_vitrine.jpg" alt="Receitas de Torta de Vitrine"><div class="info"><h3>Apostila - Receitas de Torta de Vitrine</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Torta de Vitrine')">Adicionar ao carrinho</button></div></div>
+        <div class="item"><img src="img/bolo_vulcao.jpg" alt="Receitas de Bolo Vulcão"><div class="info"><h3>Apostila - Receitas de Bolo Vulcão</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Bolo Vulcão')">Adicionar ao carrinho</button></div></div>
+        <div class="item"><img src="img/bolo_vulcao_2.jpg" alt="Receitas de Bolo Vulcão [02]"><div class="info"><h3>Apostila - Receitas de Bolo Vulcão [02]</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Bolo Vulcão [02]')">Adicionar ao carrinho</button></div></div>
+        <div class="item"><img src="img/bolos.jpg" alt="Receitas de Bolos"><div class="info"><h3>Apostila - Receitas de Bolos</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Bolos')">Adicionar ao carrinho</button></div></div>
+        <div class="item"><img src="img/bolos_de_liquidificador.jpg" alt="Receitas de Bolos de Liquidificador"><div class="info"><h3>Apostila - Receitas de Bolos de Liquidificador</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Bolos de Liquidificador')">Adicionar ao carrinho</button></div></div>
+        <div class="item"><img src="img/bolos_sem_fermento.jpg" alt="Receitas de Bolos sem Fermento"><div class="info"><h3>Apostila - Receitas de Bolos sem Fermento</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Bolos sem Fermento')">Adicionar ao carrinho</button></div></div>
+        <div class="item"><img src="img/bolos_zero.jpg" alt="Receitas de Bolos Zero"><div class="info"><h3>Apostila - Receitas de Bolos Zero</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Bolos Zero')">Adicionar ao carrinho</button></div></div>
+        <div class="item"><img src="img/cucas.jpg" alt="Receitas de Cucas"><div class="info"><h3>Apostila - Receitas de Cucas</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Cucas')">Adicionar ao carrinho</button></div></div>
       </div>
     </section>
-    <!-- Repita o padrão acima para as outras seções: Doces Gourmet, Receitas Fitness e Saudáveis, Salgados e Massas, Sobremesas Geladas, Outros -->
-    <!-- O conteúdo de cada seção deve seguir a ordem alfabética pelo nome após "Receitas de ..." -->
-    <!-- Exemplo para Doces Gourmet: -->
+    <!-- SEÇÃO: DOCES GOURMET -->
     <section id="doces" class="secao">
       <h2>Doces Gourmet</h2>
       <div class="catalogo-lista">
-        <div class="item"><img src="img/balas_gourmet.jpg" alt="Receitas de Balas Gourmet"><div class="info"><h3>Apostila - Receitas de Balas Gourmet</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Balas Gourmet')">Adicionar ao carrinho</button></div></div>
-        <div class="item"><img src="img/barras_recheadas.jpg" alt="Receitas de Barras Recheadas"><div class="info"><h3>Apostila - Receitas de Barras Recheadas</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Barras Recheadas')">Adicionar ao carrinho</button></div></div>
-        <div class="item"><img src="img/bem_casado.jpg" alt="Receitas de Bem Casado"><div class="info"><h3>Apostila - Receitas de Bem Casado</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Bem Casado')">Adicionar ao carrinho</button></div></div>
-        <div class="item"><img src="img/brigadeiro_gourmet.jpg" alt="Receitas de Brigadeiro Gourmet"><div class="info"><h3>Apostila - Receitas de Brigadeiro Gourmet</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Brigadeiro Gourmet')">Adicionar ao carrinho</button></div></div>
-        <div class="item"><img src="img/brigadeiro_sem_fogo.jpg" alt="Receitas de Brigadeiro sem fogo"><div class="info"><h3>Apostila - Receitas de Brigadeiro sem fogo</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Brigadeiro sem fogo')">Adicionar ao carrinho</button></div></div>
-        <div class="item"><img src="img/brownie_cookies.jpg" alt="Receitas de Brownie e Cookies"><div class="info"><h3>Apostila - Receitas de Brownie e Cookies</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Brownie e Cookies')">Adicionar ao carrinho</button></div></div>
-        <div class="item"><img src="img/cookies.jpg" alt="Receitas de Cookies"><div class="info"><h3>Apostila - Receitas de Cookies</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Cookies')">Adicionar ao carrinho</button></div></div>
-        <div class="item"><img src="img/donuts.jpg" alt="Receitas de Donuts"><div class="info"><h3>Apostila - Receitas de Donuts</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Donuts')">Adicionar ao carrinho</button></div></div>
-        <div class="item"><img src="img/macarrons.jpg" alt="Receitas de Macarrons [02]"><div class="info"><h3>Apostila - Receitas de Macarrons [02]</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Macarrons [02]')">Adicionar ao carrinho</button></div></div>
-        <div class="item"><img src="img/palha_italiana.jpg" alt="Receitas de Palha Italiana"><div class="info"><h3>Apostila - Receitas de Palha Italiana</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Palha Italiana')">Adicionar ao carrinho</button></div></div>
-        <div class="item"><img src="img/palha_italiana2.jpg" alt="Receitas de Palha Italiana"><div class="info"><h3>Apostila - Receitas de Palha Italiana </h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Palha Italiana ')">Adicionar ao carrinho</button></div></div>
-        <div class="item"><img src="img/pipoca_gourmet.jpg" alt="Receitas de Pipoca Gourmet"><div class="info"><h3>Apostila - Receitas de Pipoca Gourmet</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Pipoca Gourmet')">Adicionar ao carrinho</button></div></div>
-        <div class="item"><img src="img/rocambole.jpg" alt="Receitas de Rocambole"><div class="info"><h3>Apostila - Receitas de Rocambole</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Rocambole')">Adicionar ao carrinho</button></div></div>
-        <div class="item"><img src="img/trufas.jpg" alt="Receitas de Trufas"><div class="info"><h3>Apostila - Receitas de Trufas</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Trufas')">Adicionar ao carrinho</button></div></div>
-        <div class="item"><img src="img/trufas_bombons.jpg" alt="Receitas de Trufas e Bombons"><div class="info"><h3>Apostila - Receitas de Trufas e Bombons</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Trufas e Bombons')">Adicionar ao carrinho</button></div></div>
-        <!-- Continue listando as apostilas desse grupo -->
+        <div class="item"><img src="img/balas_gourmet.jpg" alt="Balas Gourmet"><div class="info"><h3>Apostila - Receitas de Balas Gourmet</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Balas Gourmet')">Adicionar ao carrinho</button></div></div>
+        <div class="item"><img src="img/barras_recheadas.jpg" alt="Barras Recheadas"><div class="info"><h3>Apostila - Receitas de Barras Recheadas</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Barras Recheadas')">Adicionar ao carrinho</button></div></div>
+        <div class="item"><img src="img/bem_casado.jpg" alt="Bem Casado"><div class="info"><h3>Apostila - Receitas de Bem Casado</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Bem Casado')">Adicionar ao carrinho</button></div></div>
+        <div class="item"><img src="img/brigadeiro_gourmet.jpg" alt="Brigadeiro Gourmet"><div class="info"><h3>Apostila - Receitas de Brigadeiro Gourmet</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Brigadeiro Gourmet')">Adicionar ao carrinho</button></div></div>
+        <div class="item"><img src="img/brigadeiro_sem_fogo.jpg" alt="Brigadeiro sem Fogo"><div class="info"><h3>Apostila - Receitas de Brigadeiro sem fogo</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Brigadeiro sem fogo')">Adicionar ao carrinho</button></div></div>
+        <div class="item"><img src="img/brownie_cookies.jpg" alt="Brownie e Cookies"><div class="info"><h3>Apostila - Receitas de Brownie e Cookies</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Brownie e Cookies')">Adicionar ao carrinho</button></div></div>
+        <div class="item"><img src="img/cookies.jpg" alt="Cookies"><div class="info"><h3>Apostila - Receitas de Cookies</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Cookies')">Adicionar ao carrinho</button></div></div>
+        <div class="item"><img src="img/donuts.jpg" alt="Donuts"><div class="info"><h3>Apostila - Receitas de Donuts</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Donuts')">Adicionar ao carrinho</button></div></div>
+        <div class="item"><img src="img/macarrons.jpg" alt="Macarrons [02]"><div class="info"><h3>Apostila - Receitas de Macarrons [02]</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Macarrons [02]')">Adicionar ao carrinho</button></div></div>
+        <div class="item"><img src="img/palha_italiana.jpg" alt="Palha Italiana"><div class="info"><h3>Apostila - Receitas de Palha Italiana</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Palha Italiana')">Adicionar ao carrinho</button></div></div>
+        <div class="item"><img src="img/pipoca_gourmet.jpg" alt="Pipoca Gourmet"><div class="info"><h3>Apostila - Receitas de Pipoca Gourmet</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Pipoca Gourmet')">Adicionar ao carrinho</button></div></div>
+        <div class="item"><img src="img/rocambole.jpg" alt="Rocambole"><div class="info"><h3>Apostila - Receitas de Rocambole</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Rocambole')">Adicionar ao carrinho</button></div></div>
+        <div class="item"><img src="img/trufas.jpg" alt="Trufas"><div class="info"><h3>Apostila - Receitas de Trufas</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Trufas')">Adicionar ao carrinho</button></div></div>
+        <div class="item"><img src="img/trufas_bombons.jpg" alt="Trufas e Bombons"><div class="info"><h3>Apostila - Receitas de Trufas e Bombons</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Trufas e Bombons')">Adicionar ao carrinho</button></div></div>
       </div>
     </section>
-    <!-- Repita o bloco acima para as demais seções, sempre seguindo a ordem alfabética, e substitua as imagens para cada apostila -->
-    
-    <!-- SEÇÃO: Fitness e Saudáveis -->
+    <!-- SEÇÃO: FITNESS E SAUDÁVEIS -->
     <section id="fitness" class="secao">
       <h2>Receitas Fitness e Saudáveis</h2>
       <div class="catalogo-lista">
-        <div class="item"><img src="img/doces_fitness.jpg" alt="Receitas de Doces Fitness"><div class="info"><h3>Apostila - Receitas de Doces Fitness</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Doces Fitness')">Adicionar ao carrinho</button></div></div>
-        <div class="item"><img src="img/pratos_fitness.jpg" alt="Receitas de Pratos Fitness"><div class="info"><h3>Apostila - Receitas de Pratos Fitness</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Pratos Fitness')">Adicionar ao carrinho</button></div></div>
-        <div class="item"><img src="img/sorvetes_saudaveis.jpg" alt="Receitas de Sorvetes Saudaveis"><div class="info"><h3>Apostila - Receitas de Sorvetes Saudaveis</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Sorvetes Saudaveis')">Adicionar ao carrinho</button></div></div>
-        <div class="item"><img src="img/zero_acucar_fitness.jpg" alt="Receitas de Zero Açucar e Fitness"><div class="info"><h3>Apostila - Receitas de Zero Açucar e Fitness</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Zero Açucar e Fitness')">Adicionar ao carrinho</button></div></div>
-        <!-- Continue listando as apostilas desse grupo -->
+        <div class="item"><img src="img/doces_fitness.jpg" alt="Doces Fitness"><div class="info"><h3>Apostila - Receitas de Doces Fitness</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Doces Fitness')">Adicionar ao carrinho</button></div></div>
+        <div class="item"><img src="img/pratos_fitness.jpg" alt="Pratos Fitness"><div class="info"><h3>Apostila - Receitas de Pratos Fitness</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Pratos Fitness')">Adicionar ao carrinho</button></div></div>
+        <div class="item"><img src="img/sorvetes_saudaveis.jpg" alt="Sorvetes Saudáveis"><div class="info"><h3>Apostila - Receitas de Sorvetes Saudáveis</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Sorvetes Saudáveis')">Adicionar ao carrinho</button></div></div>
+        <div class="item"><img src="img/zero_acucar_fitness.jpg" alt="Zero Açucar e Fitness"><div class="info"><h3>Apostila - Receitas de Zero Açucar e Fitness</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Zero Açucar e Fitness')">Adicionar ao carrinho</button></div></div>
       </div>
     </section>
-    <!-- SEÇÃO: Salgados e Massas -->
+    <!-- SEÇÃO: SALGADOS E MASSAS -->
     <section id="salgados" class="secao">
       <h2>Salgados e Massas</h2>
       <div class="catalogo-lista">
-        <div class="item"><img src="img/empadas.jpg" alt="Receitas de Empadas"><div class="info"><h3>Apostila - Receitas de Empadas</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Empadas')">Adicionar ao carrinho</button></div></div>
-        <div class="item"><img src="img/empadao.jpg" alt="Receitas de Empadão"><div class="info"><h3>Apostila - Receitas de Empadão</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Empadão')">Adicionar ao carrinho</button></div></div>
-        <div class="item"><img src="img/hamburguer.jpg" alt="Receitas de Hamburguer Artesanal"><div class="info"><h3>Apostila - Receitas de Hamburguer Artesanal</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Hamburguer Artesanal')">Adicionar ao carrinho</button></div></div>
-        <div class="item"><img src="img/hotdog.jpg" alt="Receitas de Hot Dog"><div class="info"><h3>Apostila - Receitas de Hot Dog</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Hot Dog')">Adicionar ao carrinho</button></div></div>
-        <div class="item"><img src="img/massas_profissional.jpg" alt="Receitas de Massas Profissional"><div class="info"><h3>Apostila - Receitas de Massas Profissional</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Massas Profissional')">Adicionar ao carrinho</button></div></div>
-        <div class="item"><img src="img/pastel_feira.jpg" alt="Receitas de Pastel de Feira"><div class="info"><h3>Apostila - Receitas de Pastel de Feira</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Pastel de Feira')">Adicionar ao carrinho</button></div></div>
-        <div class="item"><img src="img/pepanificacao.jpg" alt="Receitas Pepanificação"><div class="info"><h3>Apostila - Receitas Pepanificação</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas Pepanificação')">Adicionar ao carrinho</button></div></div>
-        <div class="item"><img src="img/pao_mel.jpg" alt="Receitas de Pão de Mel"><div class="info"><h3>Apostila - Receitas de Pão de Mel</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Pão de Mel')">Adicionar ao carrinho</button></div></div>
-        <div class="item"><img src="img/salgados_2.jpg" alt="Receitas de Salgados [02]"><div class="info"><h3>Apostila - Receitas de Salgados [02]</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Salgados [02]')">Adicionar ao carrinho</button></div></div>
-        <!-- Continue listando as apostilas desse grupo -->
+        <div class="item"><img src="img/empadao.jpg" alt="Empadão"><div class="info"><h3>Apostila - Receitas de Empadão</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Empadão')">Adicionar ao carrinho</button></div></div>
+        <div class="item"><img src="img/empadas.jpg" alt="Empadas"><div class="info"><h3>Apostila - Receitas de Empadas</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Empadas')">Adicionar ao carrinho</button></div></div>
+        <div class="item"><img src="img/hamburguer.jpg" alt="Hamburguer Artesanal"><div class="info"><h3>Apostila - Receitas de Hamburguer Artesanal</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Hamburguer Artesanal')">Adicionar ao carrinho</button></div></div>
+        <div class="item"><img src="img/hotdog.jpg" alt="Hot Dog"><div class="info"><h3>Apostila - Receitas de Hot Dog</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Hot Dog')">Adicionar ao carrinho</button></div></div>
+        <div class="item"><img src="img/massas_profissional.jpg" alt="Massas Profissional"><div class="info"><h3>Apostila - Receitas de Massas Profissional</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Massas Profissional')">Adicionar ao carrinho</button></div></div>
+        <div class="item"><img src="img/panificacao.jpg" alt="Pepanificação"><div class="info"><h3>Apostila - Receitas Pepanificação</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas Pepanificação')">Adicionar ao carrinho</button></div></div>
+        <div class="item"><img src="img/pastel_feira.jpg" alt="Pastel de Feira"><div class="info"><h3>Apostila - Receitas de Pastel de Feira</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Pastel de Feira')">Adicionar ao carrinho</button></div></div>
+        <div class="item"><img src="img/pao_mel.jpg" alt="Pão de Mel"><div class="info"><h3>Apostila - Receitas de Pão de Mel</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Pão de Mel')">Adicionar ao carrinho</button></div></div>
+        <div class="item"><img src="img/salgados_2.jpg" alt="Salgados [02]"><div class="info"><h3>Apostila - Receitas de Salgados [02]</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Salgados [02]')">Adicionar ao carrinho</button></div></div>
       </div>
     </section>
-    <!-- SEÇÃO: Sobremesas Geladas -->
+    <!-- SEÇÃO: SOBREMESAS GELADAS -->
     <section id="geladas" class="secao">
       <h2>Sobremesas Geladas</h2>
       <div class="catalogo-lista">
-        <div class="item"><img src="img/geladinho_gourmet_2.jpg" alt="Receitas de Geladinho Gourmet [02]"><div class="info"><h3>Apostila - Receitas de Geladinho Gourmet [02]</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Geladinho Gourmet [02]')">Adicionar ao carrinho</button></div></div>
-        <div class="item"><img src="img/geladinho_gourmet_6.jpg" alt="Receitas de Geladinho Gourmet [06]"><div class="info"><h3>Apostila - Receitas de Geladinho Gourmet [06]</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Geladinho Gourmet [06]')">Adicionar ao carrinho</button></div></div>
-        <div class="item"><img src="img/iogurte_caseiro.jpg" alt="Receitas de Iogurte Caseiro"><div class="info"><h3>Apostila - Receitas de Iogurte Caseiro</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Iogurte Caseiro')">Adicionar ao carrinho</button></div></div>
-        <div class="item"><img src="img/mousse.jpg" alt="Receitas de Mousse"><div class="info"><h3>Apostila - Receitas de Mousse</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Mousse')">Adicionar ao carrinho</button></div></div>
-        <div class="item"><img src="img/ovos_pascoa_3.jpg" alt="Receitas de Ovos de Pascoa [03]"><div class="info"><h3>Apostila - Receitas de Ovos de Pascoa [03]</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Ovos de Pascoa [03]')">Adicionar ao carrinho</button></div></div>
-        <div class="item"><img src="img/pudim.jpg" alt="Receitas de Pudim"><div class="info"><h3>Apostila - Receitas de Pudim</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Pudim')">Adicionar ao carrinho</button></div></div>
-        <div class="item"><img src="img/pudim_pote.jpg" alt="Receitas de Pudim no Pote"><div class="info"><h3>Apostila - Receitas de Pudim no Pote</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Pudim no Pote')">Adicionar ao carrinho</button></div></div>
-        <div class="item"><img src="img/sacole_gourmet.jpg" alt="Receitas de Sacolé Gourmet"><div class="info"><h3>Apostila - Receitas de Sacolé Gourmet</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Sacolé Gourmet')">Adicionar ao carrinho</button></div></div>
-        <div class="item"><img src="img/sorvetes_caseiros.jpg" alt="Receitas de Sorvetes Caseiros"><div class="info"><h3>Apostila - Receitas de Sorvetes Caseiros</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Sorvetes Caseiros')">Adicionar ao carrinho</button></div></div>
-        <!-- Continue listando as apostilas desse grupo -->
+        <div class="item"><img src="img/geladinho_gourmet_2.jpg" alt="Geladinho Gourmet [02]"><div class="info"><h3>Apostila - Receitas de Geladinho Gourmet [02]</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Geladinho Gourmet [02]')">Adicionar ao carrinho</button></div></div>
+        <div class="item"><img src="img/geladinho_gourmet_6.jpg" alt="Geladinho Gourmet [06]"><div class="info"><h3>Apostila - Receitas de Geladinho Gourmet [06]</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Geladinho Gourmet [06]')">Adicionar ao carrinho</button></div></div>
+        <div class="item"><img src="img/iogurte_caseiro.jpg" alt="Iogurte Caseiro"><div class="info"><h3>Apostila - Receitas de Iogurte Caseiro</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Iogurte Caseiro')">Adicionar ao carrinho</button></div></div>
+        <div class="item"><img src="img/mousse.jpg" alt="Mousse"><div class="info"><h3>Apostila - Receitas de Mousse</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Mousse')">Adicionar ao carrinho</button></div></div>
+        <div class="item"><img src="img/ovos_pascoa_3.jpg" alt="Ovos de Pascoa [03]"><div class="info"><h3>Apostila - Receitas de Ovos de Pascoa [03]</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Ovos de Pascoa [03]')">Adicionar ao carrinho</button></div></div>
+        <div class="item"><img src="img/pudim.jpg" alt="Pudim"><div class="info"><h3>Apostila - Receitas de Pudim</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Pudim')">Adicionar ao carrinho</button></div></div>
+        <div class="item"><img src="img/pudim_pote.jpg" alt="Pudim no Pote"><div class="info"><h3>Apostila - Receitas de Pudim no Pote</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Pudim no Pote')">Adicionar ao carrinho</button></div></div>
+        <div class="item"><img src="img/sacole_gourmet.jpg" alt="Sacolé Gourmet"><div class="info"><h3>Apostila - Receitas de Sacolé Gourmet</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Sacolé Gourmet')">Adicionar ao carrinho</button></div></div>
+        <div class="item"><img src="img/sorvetes_caseiros.jpg" alt="Sorvetes Caseiros"><div class="info"><h3>Apostila - Receitas de Sorvetes Caseiros</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Sorvetes Caseiros')">Adicionar ao carrinho</button></div></div>
+        <div class="item"><img src="img/sorvetes_saudaveis.jpg" alt="Sorvetes Saudáveis"><div class="info"><h3>Apostila - Receitas de Sorvetes Saudaveis</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Sorvetes Saudaveis')">Adicionar ao carrinho</button></div></div>
       </div>
     </section>
-    <!-- SEÇÃO: Outros -->
+    <!-- SEÇÃO: OUTROS -->
     <section id="outros" class="secao">
       <h2>Outros (Dicas, Técnicas e Diversos)</h2>
       <div class="catalogo-lista">
-        <div class="item"><img src="img/air_fryer.jpg" alt="Receitas de Air Frayer {02}"><div class="info"><h3>Apostila - Receitas de Air Frayer {02}</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Air Frayer {02}')">Adicionar ao carrinho</button></div></div>
-        <div class="item"><img src="img/alfajor.jpg" alt="Receitas de Alfajor"><div class="info"><h3>Apostila - Receitas de Alfajor</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Alfajor')">Adicionar ao carrinho</button></div></div>
-        <div class="item"><img src="img/caldo.jpg" alt="Receitas de Caldos"><div class="info"><h3>Apostila - Receitas de Caldos</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Caldos')">Adicionar ao carrinho</button></div></div>
-        <div class="item"><img src="img/chantininho.jpg" alt="Receitas de Chantininho"><div class="info"><h3>Apostila - Receitas de Chantininho</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Chantininho')">Adicionar ao carrinho</button></div></div>
-        <div class="item"><img src="img/cheesecake.jpg" alt="Receitas de Cheesecake"><div class="info"><h3>Apostila - Receitas de Cheesecake</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Cheesecake')">Adicionar ao carrinho</button></div></div>
-        <div class="item"><img src="img/cone_trufado.jpg" alt="Receitas de Cone Trufado"><div class="info"><h3>Apostila - Receitas de Cone Trufado</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Cone Trufado')">Adicionar ao carrinho</button></div></div>
-        <div class="item"><img src="img/copo.jpg" alt="Receitas de Copo"><div class="info"><h3>Apostila - Receitas de Copo</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Copo')">Adicionar ao carrinho</button></div></div>
-        <div class="item"><img src="img/copo_felicidade.jpg" alt="Receitas de Copo da Felicidade"><div class="info"><h3>Apostila - Receitas de Copo da Felicidade</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Copo da Felicidade')">Adicionar ao carrinho</button></div></div>
-        <div class="item"><img src="img/cuscuz_gourmet_3.jpg" alt="Receitas de Cuscuz Gourmet [03]"><div class="info"><h3>Apostila - Receitas de Cuscuz Gourmet [03]</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Cuscuz Gourmet [03]')">Adicionar ao carrinho</button></div></div>
+        <div class="item"><img src="img/air_fryer.jpg" alt="Air Fryer"><div class="info"><h3>Apostila - Receitas de Air Frayer {02}</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Air Frayer {02}')">Adicionar ao carrinho</button></div></div>
+        <div class="item"><img src="img/alfajor.jpg" alt="Alfajor"><div class="info"><h3>Apostila - Receitas de Alfajor</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Alfajor')">Adicionar ao carrinho</button></div></div>
+        <div class="item"><img src="img/caldo.jpg" alt="Caldos"><div class="info"><h3>Apostila - Receitas de Caldos</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Caldos')">Adicionar ao carrinho</button></div></div>
+        <div class="item"><img src="img/chantininho.jpg" alt="Chantininho"><div class="info"><h3>Apostila - Receitas de Chantininho</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Chantininho')">Adicionar ao carrinho</button></div></div>
+        <div class="item"><img src="img/cheesecake.jpg" alt="Cheesecake"><div class="info"><h3>Apostila - Receitas de Cheesecake</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Cheesecake')">Adicionar ao carrinho</button></div></div>
+        <div class="item"><img src="img/cone_trufado.jpg" alt="Cone Trufado"><div class="info"><h3>Apostila - Receitas de Cone Trufado</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Cone Trufado')">Adicionar ao carrinho</button></div></div>
+        <div class="item"><img src="img/copo.jpg" alt="Copo"><div class="info"><h3>Apostila - Receitas de Copo</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Copo')">Adicionar ao carrinho</button></div></div>
+        <div class="item"><img src="img/copo_felicidade.jpg" alt="Copo da Felicidade"><div class="info"><h3>Apostila - Receitas de Copo da Felicidade</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Copo da Felicidade')">Adicionar ao carrinho</button></div></div>
+        <div class="item"><img src="img/cuscuz_gourmet_3.jpg" alt="Cuscuz Gourmet [03]"><div class="info"><h3>Apostila - Receitas de Cuscuz Gourmet [03]</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Cuscuz Gourmet [03]')">Adicionar ao carrinho</button></div></div>
         <div class="item"><img src="img/dicas_confeitaria.jpg" alt="Dicas de Confeitaria"><div class="info"><h3>Apostila - Dicas de Confeitaria</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Dicas de Confeitaria')">Adicionar ao carrinho</button></div></div>
-        <div class="item"><img src="img/geleias_caseiras.jpg" alt="Receitas de Geleias Caseiras"><div class="info"><h3>Apostila - Receitas de Geleias Caseiras</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Geleias Caseiras')">Adicionar ao carrinho</button></div></div>
-        <div class="item"><img src="img/liquidificador.jpg" alt="Receitas de Liquidificador"><div class="info"><h3>Apostila - Receitas de Liquidificador</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Liquidificador')">Adicionar ao carrinho</button></div></div>
-        <div class="item"><img src="img/nordestinas.jpg" alt="Receitas de Nordestinas"><div class="info"><h3>Apostila - Receitas de Nordestinas</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Nordestinas')">Adicionar ao carrinho</button></div></div>
-        <div class="item"><img src="img/quindim.jpg" alt="Receitas de Quindim"><div class="info"><h3>Apostila - Receitas de Quindim</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Quindim')">Adicionar ao carrinho</button></div></div>
-        <div class="item"><img src="img/recheios_2.jpg" alt="Receitas de Recheios [02]"><div class="info"><h3>Apostila - Receitas de Recheios [02]</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Recheios [02]')">Adicionar ao carrinho</button></div></div>
-        <div class="item"><img src="img/recheios_3.jpg" alt="Receitas de Recheios [03]"><div class="info"><h3>Apostila - Receitas de Recheios [03]</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Recheios [03]')">Adicionar ao carrinho</button></div></div>
-        <div class="item"><img src="img/recheio_premium.jpg" alt="Receitas de Recheio Premium"><div class="info"><h3>Apostila - Receitas de Recheio Premium</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Recheio Premium')">Adicionar ao carrinho</button></div></div>
-        <div class="item"><img src="img/recheios_fogo_5.jpg" alt="Receitas de Recheios que não vão ao fogo [5]"><div class="info"><h3>Apostila - Receitas de Recheios que não vão ao fogo [5]</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Recheios que não vão ao fogo [5]')">Adicionar ao carrinho</button></div></div>
-        <div class="item"><img src="img/recheios_fogo_05.jpg" alt="Receitas de Recheios que não vão ao fogo [05]"><div class="info"><h3>Apostila - Receitas de Recheios que não vão ao fogo [05]</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Recheios que não vão ao fogo [05]')">Adicionar ao carrinho</button></div></div>
-        <div class="item"><img src="img/sopas.jpg" alt="Receitas de Sopas"><div class="info"><h3>Apostila - Receitas de Sopas</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Sopas')">Adicionar ao carrinho</button></div></div>
-        <div class="item"><img src="img/sequilhos_gourmet.jpg" alt="Receitas de Sequilhos Gourmet"><div class="info"><h3>Apostila - Receitas de Sequilhos Gourmet</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Sequilhos Gourmet')">Adicionar ao carrinho</button></div></div>
+        <div class="item"><img src="img/geleias_caseiras.jpg" alt="Geleias Caseiras"><div class="info"><h3>Apostila - Receitas de Geleias Caseiras</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Geleias Caseiras')">Adicionar ao carrinho</button></div></div>
+        <div class="item"><img src="img/liquidificador.jpg" alt="Liquidificador"><div class="info"><h3>Apostila - Receitas de Liquidificador</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Liquidificador')">Adicionar ao carrinho</button></div></div>
+        <div class="item"><img src="img/nordestinas.jpg" alt="Nordestinas"><div class="info"><h3>Apostila - Receitas de Nordestinas</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Nordestinas')">Adicionar ao carrinho</button></div></div>
+        <div class="item"><img src="img/quindim.jpg" alt="Quindim"><div class="info"><h3>Apostila - Receitas de Quindim</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Quindim')">Adicionar ao carrinho</button></div></div>
+        <div class="item"><img src="img/recheio_premium.jpg" alt="Recheio Premium"><div class="info"><h3>Apostila - Receitas de Recheio Premium</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Recheio Premium')">Adicionar ao carrinho</button></div></div>
+        <div class="item"><img src="img/recheios_2.jpg" alt="Recheios [02]"><div class="info"><h3>Apostila - Receitas de Recheios [02]</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Recheios [02]')">Adicionar ao carrinho</button></div></div>
+        <div class="item"><img src="img/recheios_3.jpg" alt="Recheios [03]"><div class="info"><h3>Apostila - Receitas de Recheios [03]</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Recheios [03]')">Adicionar ao carrinho</button></div></div>
+        <div class="item"><img src="img/recheios_fogo_5.jpg" alt="Recheios que não vão ao fogo [5]"><div class="info"><h3>Apostila - Receitas de Recheios que não vão ao fogo [5]</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Recheios que não vão ao fogo [5]')">Adicionar ao carrinho</button></div></div>
+        <div class="item"><img src="img/recheios_fogo_05.jpg" alt="Recheios que não vão ao fogo [05]"><div class="info"><h3>Apostila - Receitas de Recheios que não vão ao fogo [05]</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Recheios que não vão ao fogo [05]')">Adicionar ao carrinho</button></div></div>
+        <div class="item"><img src="img/sequilhos_gourmet.jpg" alt="Sequilhos Gourmet"><div class="info"><h3>Apostila - Receitas de Sequilhos Gourmet</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Sequilhos Gourmet')">Adicionar ao carrinho</button></div></div>
+        <div class="item"><img src="img/sopas.jpg" alt="Sopas"><div class="info"><h3>Apostila - Receitas de Sopas</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Receitas de Sopas')">Adicionar ao carrinho</button></div></div>
         <div class="item"><img src="img/conquistando_cliente.jpg" alt="Conquistando o Cliente"><div class="info"><h3>Apostila - Conquistando o Cliente</h3><div class="preco">R$ 10,00</div><button onclick="adicionarAoCarrinho('Apostila - Conquistando o Cliente')">Adicionar ao carrinho</button></div></div>
-        <!-- Continue listando todas as outras apostilas do grupo Outros/Diversos -->
       </div>
     </section>
     <!-- Carrinho -->
@@ -570,9 +557,7 @@
       <button class="finalizar-btn" onclick="finalizarCompra()">Finalizar compra no WhatsApp</button>
       <div class="whats-contato">
         <span>Ou fale direto pelo WhatsApp: </span>
-        <a class="whats-link" href="https://wa.me/5542988328445?text=Olá!%20Gostaria%20de%20fazer%20um%20pedido%20de%20apostilas%20Gourmet." target="_blank">
-          (42) 9 8832-8445
-        </a>
+        <a class="whats-link" href="https://wa.me/5542988328445?text=Olá!%20Gostaria%20de%20fazer%20um%20pedido%20de%20apostilas%20Gourmet." target="_blank">(42) 9 8832-8445</a>
       </div>
     </section>
   </main>
@@ -629,81 +614,74 @@
       window.open('https://wa.me/5542988328445?text=' + msg, '_blank');
     }
     atualizarCarrinho();
-    // MENU COMPACTO VOLTAR AO TOPO
-function scrollToTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
-
-// PESQUISA
-function pesquisarApostilas() {
-  const termo = document.getElementById('campoPesquisa').value.toLowerCase().trim();
-  const secoes = document.querySelectorAll('main .secao');
-  secoes.forEach(secao => {
-    let itens = secao.querySelectorAll('.item');
-    let achouNaSecao = false;
-    itens.forEach(item => {
-      const titulo = item.querySelector('h3').textContent.toLowerCase();
-      if (termo === '' || titulo.includes(termo)) {
-        item.style.display = '';
-        achouNaSecao = true;
-      } else {
-        item.style.display = 'none';
+    function scrollToTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
+    function pesquisarApostilas() {
+      const termo = document.getElementById('campoPesquisa').value.toLowerCase().trim();
+      const secoes = document.querySelectorAll('main .secao');
+      secoes.forEach(secao => {
+        let itens = secao.querySelectorAll('.item');
+        let achouNaSecao = false;
+        itens.forEach(item => {
+          const titulo = item.querySelector('h3').textContent.toLowerCase();
+          if (termo === '' || titulo.includes(termo)) {
+            item.style.display = '';
+            achouNaSecao = true;
+          } else {
+            item.style.display = 'none';
+          }
+        });
+        secao.style.display = achouNaSecao || termo === '' ? '' : 'none';
+      });
+    }
+    function atualizarCarrinhoFlutuante() {
+      const badge = document.getElementById('carrinhoBadge');
+      badge.textContent = carrinho.length;
+      const listaModal = document.getElementById('lista-carrinho-modal');
+      listaModal.innerHTML = '';
+      if (carrinho.length === 0) {
+        listaModal.innerHTML = '<li>Seu carrinho está vazio.</li>';
+        document.getElementById('total-carrinho-modal').textContent = '';
+        return;
       }
-    });
-    secao.style.display = achouNaSecao || termo === '' ? '' : 'none';
-  });
-}
-
-// ÍCONE FLUTUANTE DO CARRINHO + MODAL
-function atualizarCarrinhoFlutuante() {
-  const badge = document.getElementById('carrinhoBadge');
-  badge.textContent = carrinho.length;
-  const listaModal = document.getElementById('lista-carrinho-modal');
-  listaModal.innerHTML = '';
-  if (carrinho.length === 0) {
-    listaModal.innerHTML = '<li>Seu carrinho está vazio.</li>';
-    document.getElementById('total-carrinho-modal').textContent = '';
-    return;
-  }
-  carrinho.forEach((item, index) => {
-    const li = document.createElement('li');
-    li.textContent = `${item} - R$ 10,00`;
-    li.style.marginBottom = '7px';
-    const btnRemover = document.createElement('button');
-    btnRemover.textContent = 'Remover';
-    btnRemover.style.marginLeft = '15px';
-    btnRemover.style.background = '#c0392b';
-    btnRemover.style.color = '#fff';
-    btnRemover.style.border = 'none';
-    btnRemover.style.borderRadius = '4px';
-    btnRemover.style.cursor = 'pointer';
-    btnRemover.onclick = () => {
-      carrinho.splice(index, 1);
-      atualizarCarrinho();
+      carrinho.forEach((item, index) => {
+        const li = document.createElement('li');
+        li.textContent = `${item} - R$ 10,00`;
+        li.style.marginBottom = '7px';
+        const btnRemover = document.createElement('button');
+        btnRemover.textContent = 'Remover';
+        btnRemover.style.marginLeft = '15px';
+        btnRemover.style.background = '#c0392b';
+        btnRemover.style.color = '#fff';
+        btnRemover.style.border = 'none';
+        btnRemover.style.borderRadius = '4px';
+        btnRemover.style.cursor = 'pointer';
+        btnRemover.onclick = () => {
+          carrinho.splice(index, 1);
+          atualizarCarrinho();
+          atualizarCarrinhoFlutuante();
+          localStorage.setItem('carrinhoGourmet', JSON.stringify(carrinho));
+        };
+        li.appendChild(btnRemover);
+        listaModal.appendChild(li);
+      });
+      let total = carrinho.length * 10;
+      document.getElementById('total-carrinho-modal').textContent = `Total: R$ ${total.toFixed(2).replace('.', ',')}`;
+    }
+    function abrirModalCarrinho() {
       atualizarCarrinhoFlutuante();
-      localStorage.setItem('carrinhoGourmet', JSON.stringify(carrinho));
-    };
-    li.appendChild(btnRemover);
-    listaModal.appendChild(li);
-  });
-  let total = carrinho.length * 10;
-  document.getElementById('total-carrinho-modal').textContent = `Total: R$ ${total.toFixed(2).replace('.', ',')}`;
-}
-function abrirModalCarrinho() {
-  atualizarCarrinhoFlutuante();
-  document.getElementById('modalCarrinhoBg').style.display = 'flex';
-  document.body.style.overflow = 'hidden';
-}
-function fecharModalCarrinho(ev) {
-  if (!ev || ev.target === document.getElementById('modalCarrinhoBg')) {
-    document.getElementById('modalCarrinhoBg').style.display = 'none';
-    document.body.style.overflow = '';
-  }
-}
-document.addEventListener('keydown', function(e){
-  if(e.key === "Escape") fecharModalCarrinho();
-});
-
-// Inicialização
-atualizarCarrinhoFlutuante();
+      document.getElementById('modalCarrinhoBg').style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+    function fecharModalCarrinho(ev) {
+      if (!ev || ev.target === document.getElementById('modalCarrinhoBg')) {
+        document.getElementById('modalCarrinhoBg').style.display = 'none';
+        document.body.style.overflow = '';
+      }
+    }
+    document.addEventListener('keydown', function(e){
+      if(e.key === "Escape") fecharModalCarrinho();
+    });
+    atualizarCarrinhoFlutuante();
   </script>
 </body>
 </html>
